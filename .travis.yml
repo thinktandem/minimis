@@ -1,6 +1,5 @@
 language: php
 
-# This can be set to whatever you want since Lando is taking care of your deps
 php:
   - 7.1
 
@@ -8,9 +7,6 @@ services:
   - docker
 
 before_install:
-
-  - cp $SSH_KEY ~/.ssh
-
   # Install Lando
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
@@ -32,8 +28,8 @@ script:
 after_success:
 
   # Setup git to push to DO.
-  - git config --global user.email $GIT_EMAIL
-  - git config --global user.name $GIT_NAME
+  - git config --global user.email labboy0276@yahoo.com
+  - git config --global user.name "John Ouellet"
   - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
   - git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
 
