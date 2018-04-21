@@ -7,6 +7,8 @@ services:
   - docker
 
 before_install:
+  - travis pubkey
+  
   # Install Lando
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
