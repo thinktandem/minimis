@@ -9,6 +9,8 @@ services:
 
 before_install:
 
+  - cp $SSH_KEY ~/.ssh
+
   # Install Lando
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
@@ -19,16 +21,22 @@ before_install:
   - lando version
 
 script:
-  # Move everything up one folder so we can push the built repo to DO
-  - composer install
-  - cd web/profiles/minimis && composer install
-  - cd ../../..
-  - mv web/* .
-  - rm -f .gitignore
-  - cp -rf .lando.gitignore .gitignore
-  - ls -l
 
-  # Switch the lando files and start
-#  - rm -f .lando.yml
-#  - cp -rf .lando.travis.yml .lando.yml
-#  - lando start -- -v
+  # Switch the travis build files and start
+  - rm -rf .gitignore
+  - cp -rf .travis/.lando.gitignore .gitignore
+  - rm -f .lando.yml
+  - cp -rf .travis/.lando.travis.yml .lando.yml
+  - lando start -- -v
+
+after_success:
+
+  # Setup git to push to DO.
+  - git config --global user.email $GIT_EMAIL
+  - git config --global user.name $GIT_NAME
+  - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+  - git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
+
+  - git add -A
+  - git commit -m ${MESSAGE}
+  - git push drupalorg master
