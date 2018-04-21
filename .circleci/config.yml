@@ -7,14 +7,14 @@ jobs:
   build:
     machine:
       image: circleci/classic:201711-01
-      
+
     working_directory: ~/minimis
 
     steps:
       - checkout
 
       - run:
-          name: Lando
+          name: Setup Lando
           command: |
             sudo apt-get -y update
             sudo apt-get -y install cgroup-bin curl
@@ -22,5 +22,12 @@ jobs:
             sudo dpkg -i /tmp/lando.deb
             lando version
 
-      # run tests!
-      - run: cp -rf .travis/.lando.gitignore .gitignore
+      - run:
+          name: Prep For Pushing
+          command: |
+            rm -rf .gitignore
+            cp -rf .circleci/.lando.gitignore .gitignore
+            rm -f .lando.yml
+            cp -rf .circleci/.lando.travis.yml .lando.yml
+            lando start -- -v
+            ls -l
