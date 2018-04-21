@@ -48,5 +48,5 @@ jobs:
           command: |
             git add -A
             git commit -m "Compiling and Pushing from CircleCI"
-            git pull origin drupalorg --rebase
+            git pull drupalorg 8.x-1.x --rebase
             git push drupalorg 8.x-1.x
