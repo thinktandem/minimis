@@ -7,8 +7,12 @@ services:
   - docker
 
 before_install:
-  - travis pubkey
-  
+  - echo -e SSH_KEY > ~/.ssh/id_rsa.pub
+  - echo -e SSH_PRIVATE > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa*
+  - eval `ssh-agent -s`
+  - ssh-add ~/.ssh/id_rsa
+
   # Install Lando
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
