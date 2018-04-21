@@ -22,6 +22,7 @@ script:
   # Move everything up one folder so we can push the built repo to DO
   - composer install
   - cd web/profiles/minimis && composer install
+  - cd ../../..
   - mv web/* .
   - rm -f .gitignore
   - cp -rf .lando.gitignore .gitignore
