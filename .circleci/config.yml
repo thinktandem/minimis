@@ -33,20 +33,20 @@ jobs:
             git config --global user.name "John Ouellet"
             git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
             git fetch drupalorg
-            git checkout 8.x-1.x
 
       - run:
           name: Move Files & Start Lando
           command: |
             rm -f .gitignore
             rm -f .lando.yml
-            cp -rf .circle.gitignore .gitignore
-            cp -rf .circle.lando.yml .lando.yml
+            cp -rf .circleci/.gitignore .gitignore
+            cp -rf .circleci/.lando.yml .lando.yml
             lando start -- -v
 
       - run:
           name: Push to DO
           command: |
+            git checkout 8.x-1.x
             git add -A
             git commit -m "Compiling and Pushing from CircleCI"
             git push drupalorg master
