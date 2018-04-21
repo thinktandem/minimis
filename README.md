@@ -5,7 +5,7 @@ This is a D8 distro that utilizes very few modules yet is quite powerful and eas
 
 ### Core Modules
 
-Minimis comes with Layout builder enabled.  This is a great way to build out a robust site.  You can register your own layouts by [reading this tutorial](https://www.drupal.org/node/2578731).
+Minimis comes with Layout builder enabled.  This is a great way to build out a robust site.  You can register your own layouts by [reading this tutorial](https://www.drupal.org/node/2578731).  Also, if you see the contrib list below, we also added the [Dynamic Layouts](https://www.drupal.org/project/dynamic_layouts) module to allow you to build layouts via the UI.
 
 This distro relies mainly on contrib modules to get the job done.  It comes with 34 out of the current 75 contrib modules enabled.  We chose the most used and typical modules to easily build out a typical site.  You can check out the [info file](https://github.com/thinktandem/minimis/blob/master/web/profiles/minimis/minimis.info.yml) to see which modules it comes with.
 
