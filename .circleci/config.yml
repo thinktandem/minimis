@@ -22,26 +22,30 @@ jobs:
             sudo dpkg -i /tmp/lando.deb
             lando version
 
+      - add_ssh_keys:
+          fingerprints:
+            - "6d:a0:d7:e2:f1:97:02:84:e6:df:d9:56:45:76:3d:0d"
+
       - run:
           name: Prep For Pushing
           command: |
+            git config --global user.email labboy0276@yahoo.com
+            git config --global user.name "John Ouellet"
+            git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
             git checkout 8.x-1.x
+
+      - run:
+          name: Move Files & Start Lando
+          command: |
             rm -rf .gitignore
             cp -rf .circleci/.lando.gitignore .gitignore
             rm -f .lando.yml
             cp -rf .circleci/.lando.circle.yml .lando.yml
             lando start -- -v
 
-      - add_ssh_keys:
-          fingerprints:
-            - "6d:a0:d7:e2:f1:97:02:84:e6:df:d9:56:45:76:3d:0d"
-
       - run:
           name: Push to DO
           command: |
-            git config --global user.email labboy0276@yahoo.com
-            git config --global user.name "John Ouellet"
-            git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
             git add -A
             git commit -m "Compiling and Pushing from CircleCI"
             git push drupalorg master
