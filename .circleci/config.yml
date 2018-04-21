@@ -38,10 +38,10 @@ jobs:
       - run:
           name: Move Files & Start Lando
           command: |
-            rm -rf .gitignore
+            rm -f .gitignore
             rm -f .lando.yml
-            cp -rf ~/.circleci/.gitignore .gitignore
-            cp -rf ~/.circleci/.lando.yml .lando.yml
+            cp -rf .circle.gitignore .gitignore
+            cp -rf .circle.lando.yml .lando.yml
             lando start -- -v
 
       - run:
