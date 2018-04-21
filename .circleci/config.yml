@@ -48,6 +48,4 @@ jobs:
           command: |
             git add -A
             git commit -m "Compiling and Pushing from CircleCI"
-            git checkout 8.x-1.x
-            git merge master
             git push drupalorg 8.x-1.x
