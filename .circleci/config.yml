@@ -30,4 +30,13 @@ jobs:
             rm -f .lando.yml
             cp -rf .circleci/.lando.travis.yml .lando.yml
             lando start -- -v
-            ls -l
+
+      - run:
+          name: Push to DO
+          command: |
+            git config --global user.email labboy0276@yahoo.com
+            git config --global user.name "John Ouellet"
+            git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
+            git add -A
+            git commit -m "Pushing from CircleCI"
+            git push drupalorg master
