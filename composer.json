@@ -1,0 +1,98 @@
+{
+    "name": "thinktandem/minimis",
+    "description": "Thinktandem's Minimis Distribution",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "John Ouellet",
+            "email": "john@thinktandem.io",
+            "homepage": "https://thinktandem.io",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/thinktandem/bootstrap"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "^8.6",
+        "drush/drush": "^9.0.0",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "thinktandem/bootstrap": "dev-master"
+    },
+    "require-dev": {
+        "webflo/drupal-core-require-dev": "~8.6",
+        "behat/behat": "3.*",
+        "behat/mink": "~1.7",
+        "behat/mink-extension": "^2.2",
+        "behat/mink-goutte-driver": "~1.2",
+        "drupal/coder" : "^8.2",
+        "drupal/drupal-extension": "^3.1",
+        "drush-ops/behat-drush-endpoint": "^0.0.4",
+        "jcalderonzumba/gastonjs": "~1.0.2",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+        "mikey179/vfsStream": "~1.2",
+        "overtrue/phplint": "^1.0",
+        "phpunit/phpunit": "^4.8",
+        "symfony/css-selector": "^3.4",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+       "test": [
+            "./vendor/bin/phplint --no-cache",
+            "./vendor/bin/phpcs --standard=PSR2 --colors app",
+            "./vendor/bin/phpunit"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches-file": "composer.patches.json"
+    }
+}

@@ -1,0 +1,63 @@
+name: Minimis
+type: profile
+description: Drupal 8 distro that utilizes very few modules yet is quite powerful and easy to use.
+core: 8.x
+
+distribution:
+  name: Minimis
+
+dependencies:
+  # Core modules
+  - block
+  - block_content
+  - ckeditor
+  - config
+  - comment
+  - contextual
+  - datetime
+  - dynamic_page_cache
+  - editor
+  - entity_reference
+  - field_layout
+  - field_ui
+  - file
+  - filter
+  - help
+  - image
+  - layout_builder
+  - layout_discovery
+  - link
+  - media
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - path
+  - page_cache
+  - quickedit
+  - taxonomy
+  - rdf
+  - search
+  - shortcut
+  - toolbar
+  - views
+  - views_ui
+
+  # Contrib modules
+  - admin_toolbar
+  - adminimal_admin_toolbar
+  - bootstrap_library
+  - ctools
+  - dynamic_layouts
+  - linkit
+  - metatag
+  - paragraphs
+  - pathauto
+  - redirect
+  - token
+  - twitter_block
+  - schema_metatag
+
+themes:
+  - adminimal_theme
+  - bootstrap_barrio

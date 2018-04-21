@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "drupal/core": {
+      "https://dgo.to/2924549 Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch"
+    }
+  }
+}

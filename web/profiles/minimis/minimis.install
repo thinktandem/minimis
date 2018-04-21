@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * The Minimis Install File.
+ */
+
+
+/**
+ * Implements hook_install().
+ *
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function minimis_base_install() {
+  global $config_directories;
+
+  $sync_directory = '../config/sync';
+
+  // Update settings.php.
+  $settings['config_directories']['sync'] = (object) [
+    'value' => $sync_directory,
+    'required' => TRUE,
+  ];
+
+  // Rewrite this so it changes it on install.
+  drupal_rewrite_settings($settings);
+  $config_directories['sync'] = $sync_directory;
+}
+
+/**
+ * Implements hook_install_tasks().
+ */
+function minimis_install_tasks(&$install_state) {
+  $tasks = [
+    'minimis_themes_setup' => [
+      'display_name' => t('Setup Admin & Default Themes'),
+      'display' => TRUE,
+    ],
+  ];
+  return $tasks;
+}
+
+/**
+ * Install the admin & default theme.
+ *
+ * @param array $install_state
+ *   The install state.
+ */
+function minimis_themes_setup(array &$install_state) {
+  // Set the admin theme.
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('admin', 'adminimal_theme')
+    ->save();
+
+  // Set the admin theme for edit and adding content.
+  \Drupal::configFactory()
+  ->getEditable('node.settings')
+  ->set('use_admin_theme', TRUE)
+  ->save();
+
+  // Set the default theme to bootstrap_barrio.
+  \Drupal::configFactory()
+  ->getEditable('system.theme')
+  ->set('default', 'bootstrap_barrio')
+  ->save();
+
+  // Set the default library in bootstrap_barrio to production.
+  // library that is in root libraries folder.
+  \Drupal::configFactory()
+  ->getEditable('bootstrap_barrio.settings')
+  ->set('bootstrap_barrio_library', 'production')
+  ->save();
+}
