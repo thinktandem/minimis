@@ -1,0 +1,25 @@
+language: php
+
+# This can be set to whatever you want since Lando is taking care of your deps
+php:
+  - 7.1
+
+services:
+  - docker
+
+before_install:
+
+  # Install Lando
+  - sudo apt-get -y update
+  - sudo apt-get -y install cgroup-bin curl
+  - curl -fsSL -o /tmp/lando.deb https://github.com/lando/lando/releases/download/v3.0.0-beta.35/lando-v3.0.0-beta.35.deb
+  - sudo dpkg -i /tmp/lando.deb
+
+  # Sanity check to make sure we are rolling
+  - lando version
+
+script:
+  # Switch the lando files and start
+  - rm -f .lando.yml
+  - cp -rf .lando.travis.yml .lando.yml
+  - lando start -- -v
