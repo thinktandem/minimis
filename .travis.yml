@@ -25,7 +25,7 @@ script:
   - mv web/* .
   - rm -f .gitignore
   - cp -rf .lando.gitignore .gitignore
-  - pwd
+  - ls -l
 
   # Switch the lando files and start
 #  - rm -f .lando.yml
