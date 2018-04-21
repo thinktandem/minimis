@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     machine:
-      image: circleci/classic:201711-01
+      image: circleci/classic:edge
 
     working_directory: ~/minimis
 
@@ -25,6 +25,7 @@ jobs:
       - run:
           name: Prep For Pushing
           command: |
+            git checkout 8.x-1.x
             rm -rf .gitignore
             cp -rf .circleci/.lando.gitignore .gitignore
             rm -f .lando.yml
@@ -42,5 +43,5 @@ jobs:
             git config --global user.name "John Ouellet"
             git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
             git add -A
-            git commit -m "Pushing from CircleCI"
+            git commit -m "Compiling and Pushing from CircleCI"
             git push drupalorg master
