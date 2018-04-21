@@ -39,6 +39,7 @@ jobs:
           command: |
             rm -f .gitignore
             rm -f .lando.yml
+            rm -f web/profiles/minimis/.gitignore
             cp -rf .circleci/.gitignore .gitignore
             cp -rf .circleci/.lando.yml .lando.yml
             lando start -- -v
