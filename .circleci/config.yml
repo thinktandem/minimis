@@ -29,7 +29,7 @@ jobs:
             rm -rf .gitignore
             cp -rf .circleci/.lando.gitignore .gitignore
             rm -f .lando.yml
-            cp -rf .circleci/.lando.travis.yml .lando.yml
+            cp -rf .circleci/.lando.circle.yml .lando.yml
             lando start -- -v
 
       - add_ssh_keys:
