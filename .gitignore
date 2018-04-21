@@ -7,6 +7,9 @@
 /web/profiles/contrib/
 /web/libraries/
 
+# Keep the libraries folder
+!/web/libraries/.gitkeep
+
 # Ignore sensitive information
 /web/sites/*/settings.local.php
 
