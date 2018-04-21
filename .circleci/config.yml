@@ -31,7 +31,6 @@ jobs:
           command: |
             git config --global user.email labboy0276@yahoo.com
             git config --global user.name "John Ouellet"
-            git fetch --unshallow
             git remote add drupalorg labboy0276@git.drupal.org:project/minimis.git
             git fetch drupalorg
             git checkout 8.x-1.x
