@@ -113,21 +113,4 @@ class ScriptHandler {
     exec("find " . $drupal_root . " -name '.git' | xargs rm -rf");
   }
 
-  /**
-   * Post Drupal Scaffold Procedure.
-   *
-   * @param \Composer\EventDispatcher\Event $event
-   *   The script event.
-   */
-  public static function moveProfile(Event $event) {
-
-    $fs = new Filesystem();
-    $drupal_root = static::getDrupalRoot(getcwd());
-    $profile = '/profiles/minimis';
-
-    // Move the profile itself.
-    unlink($drupal_root . '/profiles/.gitkeep');
-    rename('minimis', $drupal_root . $profile);
-  }
-
 }

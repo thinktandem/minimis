@@ -1,7 +1,7 @@
 {
     "name": "thinktandem/minimis",
     "description": "Thinktandem's Minimis Distribution",
-    "type": "project",
+    "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -94,10 +94,8 @@
             "Tandem\\composer\\ScriptHandler::createRequiredFiles",
             "Tandem\\composer\\ScriptHandler::removeGitDirectories"
         ],
-        "post-drupal-scaffold-cmd": ["Tandem\\composer\\ScriptHandler::moveProfile"],
         "nuke": [
-            "mv web/profiles/minimis minimis",
-            "rm -r -f web vendor composer.lock minimis/modules minimis/themes"
+            "rm -r -f web vendor composer.lock"
         ]
     },
     "extra": {
