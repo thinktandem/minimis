@@ -1,6 +1,22 @@
 # Minimis
 This is a D8 distro that utilizes very few modules yet is quite powerful and easy to use.
 
+## Install
+
+### Lando
+```bash
+git clone git@github.com:thinktandem/minimis-project.git YOUR_DIR
+cd YOUR_DIR 
+lando start
+```
+
+### Non-Lando
+```bash
+composer create-project thinktandem/minimis-project YOUR_DIR -s dev
+```
+
+Then do whatever you need to do in your local dev stack to get this running. 
+
 ## Features
 
 ### Core Modules
