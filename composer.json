@@ -95,7 +95,10 @@
             "Tandem\\composer\\ScriptHandler::removeGitDirectories"
         ],
         "post-drupal-scaffold-cmd": ["Tandem\\composer\\ScriptHandler::moveProfile"],
-        "nuke": "rm -r -f web vendor composer.lock"
+        "nuke": [
+            "mv web/profiles/minimis minimis",
+            "rm -r -f web vendor composer.lock minimis/modules minimis/themes"
+        ]
     },
     "extra": {
         "installer-paths": {
