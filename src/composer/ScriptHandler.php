@@ -121,9 +121,19 @@ class ScriptHandler {
    */
   public static function postDrupalScaffoldProcedure(Event $event) {
 
-//    $fs = new Filesystem();
-//    $drupal_root = static::getDrupalRoot(getcwd());
-//
+    $fs = new Filesystem();
+    $drupal_root = static::getDrupalRoot(getcwd());
+    $dir = '/profiles/minimis';
+
+    if (!$fs->exists($drupal_root . $dir)) {
+      $fs->mkdir($drupal_root . $dir);
+    }
+
+    copy('minimis.info.yml', $drupal_root . $dir . 'minimis.info.yml');
+    copy('minimis.info.yml', $drupal_root . $dir . 'minimis.profile');
+    copy('minimis.info.yml', $drupal_root . $dir . 'minimis.install');
+
+
 //    if ($fs->exists($drupal_root . '/profiles/varbase/src/assets/robots-staging.txt')) {
 //      // Create staging robots file.
 //      copy($drupal_root . '/profiles/varbase/src/assets/robots-staging.txt', $drupal_root . '/robots-staging.txt');

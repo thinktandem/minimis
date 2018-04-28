@@ -77,44 +77,25 @@
         "autoloader-suffix": "Drupal8"
     },
     "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
+        "psr-4": {
+            "Tandem\\composer\\": "src/composer"
+        }
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
+        "pre-install-cmd": ["Tandem\\composer\\ScriptHandler::checkComposerVersion"],
+        "pre-update-cmd": ["Tandem\\composer\\ScriptHandler::checkComposerVersion"],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-       "test": [
-            "./vendor/bin/phplint --no-cache",
-            "./vendor/bin/phpcs --standard=PSR2 --colors app",
-            "./vendor/bin/phpunit"
-        ]
-    },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-        "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-        "post-install-cmd": [
-            "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-            "Varbase\\composer\\ScriptHandler::removeGitDirectories",
+            "Tandem\\composer\\ScriptHandler::createRequiredFiles",
+            "Tandem\\composer\\ScriptHandler::removeGitDirectories",
             "@composer drupal-scaffold"
         ],
         "post-update-cmd": [
-            "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-            "Varbase\\composer\\ScriptHandler::removeGitDirectories"
+            "Tandem\\composer\\ScriptHandler::createRequiredFiles",
+            "Tandem\\composer\\ScriptHandler::removeGitDirectories"
         ],
-        "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
+        "post-drupal-scaffold-cmd": ["Tandem\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
+        "nuke": "rm -r -f web vendor composer.lock"
     },
     "extra": {
         "installer-paths": {
@@ -126,18 +107,6 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "merge-plugin": {
-            "require": [
-                "web/profiles/minimis/composer.json"
-            ],
-            "recurse": true,
-            "replace": false,
-            "ignore-duplicates": false,
-            "merge-dev": true,
-            "merge-extra": true,
-            "merge-extra-deep": true,
-            "merge-scripts": false
         },
         "patches-file": "composer.patches.json"
     }
