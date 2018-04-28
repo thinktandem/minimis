@@ -119,7 +119,7 @@ class ScriptHandler {
    * @param \Composer\EventDispatcher\Event $event
    *   The script event.
    */
-  public static function postDrupalScaffoldProcedure(Event $event) {
+  public static function moveProfile(Event $event) {
 
     $fs = new Filesystem();
     $drupal_root = static::getDrupalRoot(getcwd());
@@ -129,9 +129,9 @@ class ScriptHandler {
       $fs->mkdir($drupal_root . $dir);
     }
 
-    copy('minimis.info.yml', $drupal_root . $dir . 'minimis.info.yml');
-    copy('minimis.info.yml', $drupal_root . $dir . 'minimis.profile');
-    copy('minimis.info.yml', $drupal_root . $dir . 'minimis.install');
+    copy('minimis.info.yml', $drupal_root . $dir . '/minimis.info.yml');
+    copy('minimis.profile', $drupal_root . $dir . '/minimis.profile');
+    copy('minimis.install', $drupal_root . $dir . '/minimis.install');
 
 
 //    if ($fs->exists($drupal_root . '/profiles/varbase/src/assets/robots-staging.txt')) {

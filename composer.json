@@ -94,7 +94,7 @@
             "Tandem\\composer\\ScriptHandler::createRequiredFiles",
             "Tandem\\composer\\ScriptHandler::removeGitDirectories"
         ],
-        "post-drupal-scaffold-cmd": ["Tandem\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
+        "post-drupal-scaffold-cmd": ["Tandem\\composer\\ScriptHandler::moveProfile"],
         "nuke": "rm -r -f web vendor composer.lock"
     },
     "extra": {
