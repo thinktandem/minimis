@@ -21,11 +21,11 @@
     ],
     "extra": {
         "installer-paths": {
-            "libraries/{$name}": ["type:drupal-library"],
-            "modules/contrib/{$name}": ["type:drupal-module"],
-            "themes/contrib/{$name}": ["type:drupal-theme"],
-            "modules/custom/{$name}": ["type:drupal-custom-module"],
-            "themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/profiles/minimis/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/minimis/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/profiles/minimis/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/minimis/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "patches-file": "composer.patches.json"
     },
@@ -49,8 +49,5 @@
         "drupal/schema_metatag": "^1.0",
         "drupal/token": "^1.0",
         "drupal/twitter_block": "^2.1"
-    },
-    "replace": {
-        "drupal/core": "*"
     }
 }

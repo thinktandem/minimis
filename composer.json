@@ -29,11 +29,11 @@
         "drupal/core": "^8.6",
         "drush/drush": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3",
-        "thinktandem/bootstrap": "dev-master"
+        "webmozart/path-util": "^2.3"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "~8.6",
+        "wikimedia/composer-merge-plugin": "dev-master",
         "behat/behat": "3.*",
         "behat/mink": "~1.7",
         "behat/mink-extension": "^2.2",
@@ -55,7 +55,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "preferred-install": "dist",
+        "autoloader-suffix": "Drupal8"
     },
     "autoload": {
         "classmap": [
@@ -92,6 +93,18 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "merge-plugin": {
+            "require": [
+                "web/profiles/minimis/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": false
         },
         "patches-file": "composer.patches.json"
     }
