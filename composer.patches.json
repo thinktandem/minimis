@@ -1,8 +1,3 @@
 {
-  "patches": {
-    "drupal/core": {
-      "https://dgo.to/2924549 Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch",
-      "https://dgo.to/2923701 Field rendering should respect configurable field display": "https://www.drupal.org/files/issues/2018-03-13/title.display-2923701-161.patch"
-    }
-  }
+  "patches": {}
 }
