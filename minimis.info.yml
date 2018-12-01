@@ -54,9 +54,11 @@ dependencies:
   - paragraphs
   - pathauto
   - redirect
-  - token
-  - twitter_block
   - schema_metatag
+  - simple_sitemap
+  - token
+  - token_filter
+  - twitter_block
 
 themes:
   - adminimal_theme
