@@ -3,17 +3,11 @@ This is a D8 distro that utilizes very few modules yet is quite powerful and eas
 
 ## Install
 
-### Lando
-```bash
-git clone git@github.com:thinktandem/minimis-project.git YOUR_DIR
-cd YOUR_DIR 
-lando start
-```
-
-### Non-Lando
 ```bash
 composer create-project thinktandem/minimis-project YOUR_DIR -s dev
 ```
+
+We also recommend using the [Minimis Project](https://github.com/thinktandem/minimis-project)  It is geared towards Lando usage and is good to go out of the box for localdev.
 
 Then do whatever you need to do in your local dev stack to get this running. 
 
