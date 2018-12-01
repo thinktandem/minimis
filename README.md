@@ -21,7 +21,7 @@ This distro relies mainly on contrib modules to get the job done.  It comes with
 
 ### Contrib Modules
 
-This distro only comes with 13 contrib modules.  We chose the following as they provide the best solutions for Site Building, Functionality & SEO:
+This distro only comes with 15 contrib modules.  We chose the following as they provide the best solutions for Site Building, Functionality & SEO:
 - admin_toolbar
 - adminimal_admin_toolbar
 - bootstrap_library
@@ -32,9 +32,11 @@ This distro only comes with 13 contrib modules.  We chose the following as they 
 - paragraphs
 - pathauto
 - redirect
-- token
-- twitter_block
 - schema_metatag
+- simple_sitemap
+- token
+- token_filter
+- twitter_block
 
 ### Theme
 
