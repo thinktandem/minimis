@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access media browser'
+  - 'search content'
+  - 'use manualcrop'
+  - 'use media wysiwyg'
+  - 'use text format basic_html'
+  - 'view files'
+  - 'view own files'
