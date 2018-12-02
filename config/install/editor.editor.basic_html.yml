@@ -1,3 +1,4 @@
+uuid: 5bc85c8d-0e2f-4450-8409-135b5f7b8e68
 langcode: en
 status: true
 dependencies:
@@ -16,11 +17,25 @@ settings:
           items:
             - Bold
             - Italic
+            - Underline
+            - Strike
+        -
+          name: Styling
+          items:
+            - Styles
+            - Format
         -
           name: Links
           items:
             - DrupalLink
             - DrupalUnlink
+        -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
         -
           name: Lists
           items:
@@ -35,6 +50,7 @@ settings:
           name: Tools
           items:
             - Source
+            - tokenbrowser
   plugins:
     stylescombo:
       styles: ''
