@@ -46,7 +46,6 @@
         "drupal/redirect": "^1.0",
         "drupal/schema_metatag": "^1.0",
         "drupal/token": "^1.0",
-        "drupal/twitter_block": "^2.1",
         "thinktandem/bootstrap": "dev-master",
         "drupal/simple_sitemap": "^3.0",
         "drupal/token_filter": "^1.1",

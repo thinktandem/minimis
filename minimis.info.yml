@@ -59,7 +59,6 @@ dependencies:
   - simple_sitemap
   - token
   - token_filter
-  - twitter_block
 
 themes:
   - adminimal_theme
