@@ -1,8 +1,9 @@
+uuid: 7674ef24-718b-49da-9213-c89f07e548d2
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+  default_config_hash: bOqURm5I1q-lRLLTlvF_5jVqcngzmh6AIMLwZ_1_T6E
 id: anonymous
 label: 'anonymous user'
 weight: 0
@@ -12,4 +13,5 @@ permissions:
   - 'search content'
   - 'use manualcrop'
   - 'view files'
+  - 'view media'
   - 'view own files'

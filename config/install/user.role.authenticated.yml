@@ -1,8 +1,9 @@
+uuid: 041e2a67-aa9d-44a5-beb4-1a253521cedb
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+  default_config_hash: bQtNM7ky9HtTQTr__imyjZK-BRte1Z3O3AQBYgOPHgw
 id: authenticated
 label: 'authenticated user'
 weight: 1
@@ -15,4 +16,5 @@ permissions:
   - 'use media wysiwyg'
   - 'use text format basic_html'
   - 'view files'
+  - 'view media'
   - 'view own files'
