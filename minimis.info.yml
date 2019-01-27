@@ -48,6 +48,7 @@ dependencies:
   - bootstrap_library
   - ctools
   - dynamic_layouts
+  - google_analytics
   - layout_builder_restrictions
   - linkit
   - metatag
