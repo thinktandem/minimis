@@ -21,24 +21,31 @@ This distro relies mainly on contrib modules to get the job done.  It comes with
 
 ### Contrib Modules
 
-This distro only comes with 16 contrib modules to get your site going right away.  We chose the following as they provide the best solutions for Site Building, Functionality & SEO:
+This distro only comes with 21 (17 installed + 4 additional requirements) contrib modules to get your site going right away.  We chose the following as they provide the best solutions for Site Building, Functionality & SEO:
 
-- admin_toolbar
-- adminimal_admin_toolbar
-- bootstrap_library
-- ctools
-- dynamic_layouts
-- google_analytics
-- layout_builder_restrictions
-- linkit
-- metatag
-- paragraphs
-- pathauto
-- redirect
-- schema_metatag
-- simple_sitemap
-- token
-- token_filter
+  - admin_toolbar
+  - adminimal_admin_toolbar
+  - bootstrap_library
+  - ctools
+  - dynamic_layouts
+  - google_analytics
+  - layout_builder_restrictions
+  - linkit
+  - media_entity_browser
+  - metatag
+  - paragraphs
+  - pathauto
+  - redirect
+  - schema_metatag
+  - simple_sitemap
+  - token
+  - token_filter
+  
+  Required by Media Entity Browser:
+  - embed
+  - entity_browser
+  - entity_embed
+  - inline_entity_form
 
 ### Theme
 

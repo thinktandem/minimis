@@ -48,9 +48,14 @@ dependencies:
   - bootstrap_library
   - ctools
   - dynamic_layouts
+  - embed
+  - entity_browser
+  - entity_embed
   - google_analytics
+  - inline_entity_form
   - layout_builder_restrictions
   - linkit
+  - media_entity_browser
   - metatag
   - paragraphs
   - pathauto
