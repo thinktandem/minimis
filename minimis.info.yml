@@ -1,4 +1,4 @@
-name: Minimis
+pname: Minimis
 type: profile
 description: Drupal 8 distro that utilizes very few modules yet is quite powerful and easy to use.
 core: 8.x
@@ -18,7 +18,6 @@ dependencies:
   - dynamic_page_cache
   - editor
   - entity_reference
-  - field_layout
   - field_ui
   - file
   - filter
@@ -49,6 +48,7 @@ dependencies:
   - bootstrap_library
   - ctools
   - dynamic_layouts
+  - layout_builder_restrictions
   - linkit
   - metatag
   - paragraphs
