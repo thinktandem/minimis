@@ -6,8 +6,14 @@ dependencies:
     - field.field.node.basic_page.body
     - node.type.basic_page
   module:
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    sections: {  }
+_core:
+  default_config_hash: VGHb2gug5Ka6mUymXwpo95tnXMekvpfsOyAqReoOBd8
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
@@ -22,7 +28,7 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

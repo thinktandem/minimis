@@ -1,14 +1,17 @@
+uuid: 2f1ebebd-886a-4669-be55-0872806f1515
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - user
   theme:
     - bootstrap_barrio
+_core:
+  default_config_hash: Q4NYUInjPSH1DshI7uA8K3OG6uqZJ4kOe-YERXP3pCc
 id: bootstrap_barrio_login
 theme: bootstrap_barrio
 region: content
-weight: 10
+weight: -1
 provider: null
 plugin: user_login_block
 settings:
