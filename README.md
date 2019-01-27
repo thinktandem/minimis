@@ -4,10 +4,10 @@ This is a D8 distro that utilizes very few modules yet is quite powerful and eas
 ## Install
 
 ```bash
-composer create-project thinktandem/minimis-project YOUR_DIR -s dev
+composer create-project thinktandem/minimis YOUR_DIR -s dev
 ```
 
-We also recommend using the [Minimis Project](https://github.com/thinktandem/minimis-project)  It is geared towards Lando usage and is good to go out of the box for localdev.
+We **highly** recommend using the [Minimis Project](https://github.com/thinktandem/minimis-project)  It is geared towards Lando usage and is good to go out of the box for localdev.
 
 Then do whatever you need to do in your local dev stack to get this running. 
 
@@ -41,5 +41,4 @@ This distro only comes with 15 contrib modules.  We chose the following as they 
 ### Theme
 
 Minimis is Bootstrap 4 compliant via the [Bootstrap Barrio Theme](https://www.drupal.org/project/bootstrap_barrio).  We also install a local source of Bootstrap 4 as well.  
-
 We also use the [Adminimal Theme](https://www.drupal.org/project/adminimal_theme) for the backend for a much better approach.   
