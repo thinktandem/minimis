@@ -58,7 +58,8 @@
         "drupal/media_entity_browser": "2.x-dev",
         "drupal/embed": "^1.0",
         "drupal/big_pipe_sessionless": "^1.2",
-        "drupal/lazy": "^1.1"
+        "drupal/lazy": "^1.1",
+        "drupal/config_rewrite": "^1.1"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "~8.6",

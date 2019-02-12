@@ -47,6 +47,7 @@ dependencies:
   - adminimal_admin_toolbar
   - big_pipe_sessionless
   - bootstrap_library
+  - config_rewrite
   - ctools
   - dynamic_layouts
   - embed
