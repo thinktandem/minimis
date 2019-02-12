@@ -49,8 +49,8 @@ This distro only comes with 23 (19 installed + 4 additional requirements) contri
   - simple_sitemap
 
 **Performance**
-  - lazy
   - big_pipe_sessionless
+  - lazy
 
 
 ### Theme
