@@ -45,6 +45,7 @@ dependencies:
   # Contrib modules
   - admin_toolbar
   - adminimal_admin_toolbar
+  - big_pipe_sessionless
   - bootstrap_library
   - ctools
   - dynamic_layouts
@@ -54,13 +55,17 @@ dependencies:
   - google_analytics
   - inline_entity_form
   - layout_builder_restrictions
+  - lazy
   - linkit
   - media_entity_browser
   - metatag
+  - metatag_dc
+  - metatag_open_graph
   - paragraphs
   - pathauto
   - redirect
   - schema_metatag
+  - schema_web_site
   - simple_sitemap
   - token
   - token_filter
