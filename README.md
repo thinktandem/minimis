@@ -21,7 +21,7 @@ This distro relies mainly on core modules to get the job done.  It comes with 33
 
 ### Contrib Modules
 
-This distro only comes with 23 (19 installed + 4 additional requirements) contrib modules to get your site going right away.  We chose the following as they provide the best solutions for Site Building, Functionality, Performance & SEO out of the box:
+This distro only comes with 24 (20 installed + 4 additional requirements) contrib modules so you can almost build your entire site without many extra modules.  We chose the following as they provide the best solutions for Site Building, Functionality, Performance & SEO out of the box:
 
 **Site Building / Functionality**
   - admin_toolbar
@@ -52,6 +52,8 @@ This distro only comes with 23 (19 installed + 4 additional requirements) contri
   - big_pipe_sessionless
   - lazy
 
+**System**
+  - config_rewrite
 
 ### Theme
 
