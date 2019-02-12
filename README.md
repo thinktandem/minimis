@@ -21,33 +21,37 @@ This distro relies mainly on core modules to get the job done.  It comes with 33
 
 ### Contrib Modules
 
-This distro only comes with 23 (19 installed + 4 additional requirements) contrib modules to get your site going right away.  We chose the following as they provide the best solutions for Site Building, Functionality & SEO:
+This distro only comes with 23 (19 installed + 4 additional requirements) contrib modules to get your site going right away.  We chose the following as they provide the best solutions for Site Building, Functionality, Performance & SEO out of the box:
 
+**Site Building / Functionality**
   - admin_toolbar
   - adminimal_admin_toolbar
-  - big_pipe_sessionless
   - bootstrap_library
   - ctools
   - dynamic_layouts
-  - google_analytics
-  - layout_builder_restrictions
-  - lazy
-  - linkit
-  - media_entity_browser
-  - metatag
-  - paragraphs
-  - pathauto
-  - redirect
-  - schema_metatag
-  - simple_sitemap
-  - token
-  - token_filter
-  
-  Required by Media Entity Browser:
   - embed
   - entity_browser
   - entity_embed
   - inline_entity_form
+  - layout_builder_restrictions
+  - linkit
+  - media_entity_browser
+  - paragraphs  
+  - token
+  - token_filter
+
+**SEO**
+  - google_analytics
+  - metatag
+  - pathauto
+  - redirect
+  - schema_metatag
+  - simple_sitemap
+
+**Performance**
+  - lazy
+  - big_pipe_sessionless
+
 
 ### Theme
 
