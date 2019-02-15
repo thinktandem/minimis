@@ -62,22 +62,21 @@
         "drupal/config_rewrite": "^1.1"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "~8.6",
-        "wikimedia/composer-merge-plugin": "dev-master",
         "behat/behat": "3.*",
         "behat/mink": "~1.7",
         "behat/mink-extension": "^2.2",
         "behat/mink-goutte-driver": "~1.2",
-        "drupal/coder" : "^8.2",
+        "drupal/coder" : "^8.2.12",
         "drupal/drupal-extension": "^3.1",
         "drush-ops/behat-drush-endpoint": "^0.0.4",
         "jcalderonzumba/gastonjs": "~1.0.2",
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",
-        "overtrue/phplint": "^1.0",
-        "phpunit/phpunit": "^4.8",
-        "symfony/css-selector": "^3.4",
-        "squizlabs/php_codesniffer": "2.*"
+        "overtrue/phplint": "^0.2.4",
+        "phpunit/phpunit": "~4.8",
+        "symfony/css-selector": "^3.4.0",
+        "squizlabs/php_codesniffer": "2.*",
+        "webflo/drupal-core-require-dev": "^8.6.0"
     },
     "conflict": {
         "drupal/drupal": "*"

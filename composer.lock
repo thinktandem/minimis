@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0758b895ae73b96ef4d55d768e881235",
+    "content-hash": "3a1e15f541c49bae8c14bedb16affd6a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1849,7 +1849,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.26",
-                    "datestamp": "1549218480",
+                    "datestamp": "1549559402",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2060,17 +2060,17 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "4.19.0",
+            "version": "4.21.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bootstrap_barrio",
-                "reference": "8.x-4.19"
+                "reference": "8.x-4.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.19.zip",
-                "reference": "8.x-4.19",
-                "shasum": "4d8f534845d276cf0d5af1973af8e5b7531fe068"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.21.zip",
+                "reference": "8.x-4.21",
+                "shasum": "0b784ce274a3c940aa6d25da4ea5ff2d80c1e419"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2081,8 +2081,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.19",
-                    "datestamp": "1549543680",
+                    "version": "8.x-4.21",
+                    "datestamp": "1550057880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3125,23 +3125,22 @@
         },
         {
             "name": "drupal/entity_browser",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_browser",
-                "reference": "8.x-2.0"
+                "reference": "8.x-2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.0.zip",
-                "reference": "8.x-2.0",
-                "shasum": "683a7a252c947433c7b78bb838d6d8973c13cf77"
+                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "56cf190f3ea3fc0af71becbc44af5954a71f216b"
             },
             "require": {
                 "drupal/core": "~8.0"
             },
             "require-dev": {
-                "drupal/ctools": "*",
                 "drupal/inline_entity_form": "*",
                 "drupal/paragraphs": "*",
                 "drupal/token": "*"
@@ -3153,8 +3152,8 @@
                     "dev-8.x-1.x": "8.1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0",
-                    "datestamp": "1536328684",
+                    "version": "8.x-2.1",
+                    "datestamp": "1550237365",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3216,7 +3215,7 @@
         },
         {
             "name": "drupal/entity_browser_entity_form",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "require": {
                 "drupal/core": "~8.0",
                 "drupal/entity_browser": "self.version",
@@ -3228,8 +3227,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0",
-                    "datestamp": "1536328684",
+                    "version": "8.x-2.1",
+                    "datestamp": "1550237365",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3353,7 +3352,8 @@
                 "source": "http://cgit.drupalcode.org/entity_embed",
                 "issues": "https://www.drupal.org/project/issues/entity_embed",
                 "irc": "irc://irc.freenode.org/drupal-media"
-            }
+            },
+            "time": "2018-12-21T23:58:10+00:00"
         },
         {
             "name": "drupal/entity_reference_revisions",
@@ -3537,17 +3537,17 @@
         },
         {
             "name": "drupal/layout_builder_restrictions",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/layout_builder_restrictions",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "2ef65a8a2c4808d94d169601de467a5d3673421c"
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "1b041511d0343520036854156d0ca4391cd7559e"
             },
             "require": {
                 "drupal/core": "^8.5.0-rc1"
@@ -3558,8 +3558,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1546439280",
+                    "version": "8.x-1.4",
+                    "datestamp": "1550089686",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3750,7 +3750,8 @@
             "homepage": "https://www.drupal.org/project/media_entity_browser",
             "support": {
                 "source": "http://cgit.drupalcode.org/media_entity_browser"
-            }
+            },
+            "time": "2019-01-04T04:57:51+00:00"
         },
         {
             "name": "drupal/metatag",
@@ -8620,28 +8621,24 @@
         },
         {
             "name": "overtrue/phplint",
-            "version": "1.1.9",
+            "version": "0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/phplint.git",
-                "reference": "dab041512195a6bf52401a66b65dc5b19e4d09ea"
+                "reference": "a91ee994f098afe256e2926140e916d25838f4fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/phplint/zipball/dab041512195a6bf52401a66b65dc5b19e4d09ea",
-                "reference": "dab041512195a6bf52401a66b65dc5b19e4d09ea",
+                "url": "https://api.github.com/repos/overtrue/phplint/zipball/a91ee994f098afe256e2926140e916d25838f4fb",
+                "reference": "a91ee994f098afe256e2926140e916d25838f4fb",
                 "shasum": ""
             },
             "require": {
-                "ext-json": "*",
                 "php": ">=5.5.9",
-                "symfony/console": "^3.2|^4.0",
-                "symfony/finder": "^3.0|^4.0",
-                "symfony/process": "^3.0|^4.0",
-                "symfony/yaml": "^3.0|^4.0"
-            },
-            "require-dev": {
-                "jakub-onderka/php-console-highlighter": "^0.3.2"
+                "symfony/console": "^2.7|^3.0",
+                "symfony/finder": "^2.7|^3.0",
+                "symfony/process": "^2.7|^3.0",
+                "symfony/yaml": "^2.7|^3.0"
             },
             "bin": [
                 "bin/phplint"
@@ -8669,7 +8666,7 @@
                 "phplint",
                 "syntax"
             ],
-            "time": "2019-01-04T12:59:53+00:00"
+            "time": "2017-07-07T09:17:59+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -9871,55 +9868,6 @@
             ],
             "description": "require-dev dependencies from drupal/core",
             "time": "2019-02-08T12:31:37+00:00"
-        },
-        {
-            "name": "wikimedia/composer-merge-plugin",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
-                "reference": "73e4ed4fa66167823cb9bfc65fdd5fd6019722b6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/73e4ed4fa66167823cb9bfc65fdd5fd6019722b6",
-                "reference": "73e4ed4fa66167823cb9bfc65fdd5fd6019722b6",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "composer/composer": "~1.0.0",
-                "jakub-onderka/php-parallel-lint": "~0.8",
-                "phpunit/phpunit": "~4.8|~5.0",
-                "squizlabs/php_codesniffer": "~2.1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                },
-                "class": "Wikimedia\\Composer\\MergePlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Wikimedia\\Composer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bryan Davis",
-                    "email": "bd808@wikimedia.org"
-                }
-            ],
-            "description": "Composer plugin to merge multiple composer.json files",
-            "time": "2018-01-10T05:07:51+00:00"
         }
     ],
     "aliases": [],
@@ -9927,8 +9875,7 @@
     "stability-flags": {
         "thinktandem/bootstrap": 20,
         "drupal/entity_embed": 20,
-        "drupal/media_entity_browser": 20,
-        "wikimedia/composer-merge-plugin": 20
+        "drupal/media_entity_browser": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
