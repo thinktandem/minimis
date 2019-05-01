@@ -19,6 +19,22 @@
         {
             "type": "git",
             "url": "https://github.com/thinktandem/bootstrap"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dinbror/blazy",
+                "version": "1.8.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "blazy"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/dinbror/blazy",
+                    "reference": "1.8.2"
+                }
+            }
         }
     ],
     "require": {
@@ -58,7 +74,7 @@
         "drupal/media_entity_browser": "2.x-dev",
         "drupal/embed": "^1.0",
         "drupal/big_pipe_sessionless": "^1.2",
-        "drupal/lazy": "^1.1",
+        "drupal/lazy": "^2.0",
         "drupal/config_rewrite": "^1.1"
     },
     "require-dev": {
