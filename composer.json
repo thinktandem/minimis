@@ -75,7 +75,8 @@
         "drupal/embed": "^1.0",
         "drupal/big_pipe_sessionless": "^1.2",
         "drupal/lazy": "^2.0",
-        "drupal/config_rewrite": "^1.1"
+        "drupal/config_rewrite": "^1.1",
+        "dinbror/blazy": "1.8.2"
     },
     "require-dev": {
         "behat/behat": "3.*",
