@@ -70,13 +70,13 @@
         "drupal/google_analytics": "^2.3",
         "drupal/inline_entity_form": "^1.0",
         "drupal/entity_browser": "^2.0",
-        "drupal/entity_embed": "^1.0",
         "drupal/media_entity_browser": "^2.0",
         "drupal/embed": "^1.0",
         "drupal/big_pipe_sessionless": "^1.2",
         "drupal/lazy": "^2.0",
         "drupal/config_rewrite": "^1.1",
-        "dinbror/blazy": "1.8.2"
+        "dinbror/blazy": "1.8.2",
+        "drupal/entity_embed": "^1.0"
     },
     "require-dev": {
         "behat/behat": "3.*",
