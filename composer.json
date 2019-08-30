@@ -17,10 +17,6 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "git",
-            "url": "https://github.com/thinktandem/bootstrap"
-        },
-        {
             "type": "package",
             "package": {
                 "name": "dinbror/blazy",
@@ -62,7 +58,6 @@
         "drupal/redirect": "^1.0",
         "drupal/schema_metatag": "^1.0",
         "drupal/token": "^1.0",
-        "thinktandem/bootstrap": "dev-master",
         "drupal/simple_sitemap": "^3.0",
         "drupal/token_filter": "^1.1",
         "zaporylie/composer-drupal-optimizations": "^1.0",
