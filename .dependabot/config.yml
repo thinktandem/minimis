@@ -7,7 +7,3 @@ update_configs:
     allowed_updates:
       - match:
           update_type: "security"
-  # other updates run monthly.
-  - package_manager: "php:composer"
-    directory: "/"
-    update_schedule: "monthly"
