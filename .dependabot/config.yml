@@ -1,8 +1,13 @@
 version: 1
 update_configs:
+  # security updates as soon as they hit.
   - package_manager: "php:composer"
     directory: "/"
-    update_schedule: "weekly"
+    update_schedule: "live"
     allowed_updates:
       - match:
           update_type: "security"
+  # other updates run monthly.
+  - package_manager: "php:composer"
+    directory: "/"
+    update_schedule: "monthly"
