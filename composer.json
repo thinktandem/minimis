@@ -40,9 +40,9 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.7",
+        "drupal/core": "^8.8",
+        "drupal/core-composer-scaffold": "^8.8.0",
         "drush/drush": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
@@ -79,21 +79,7 @@
         "drupal/entity_embed": "^1.0"
     },
     "require-dev": {
-        "behat/behat": "3.*",
-        "behat/mink": "~1.7",
-        "behat/mink-extension": "^2.2",
-        "behat/mink-goutte-driver": "~1.2",
-        "drupal/coder" : "^8.3",
-        "drupal/drupal-extension": "^3.1",
-        "drush-ops/behat-drush-endpoint": "^0.0.4",
-        "jcalderonzumba/gastonjs": "~1.2.0",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsStream": "~1.2",
-        "overtrue/phplint": "^1.2.0",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "^3.4.0",
-        "squizlabs/php_codesniffer": "3.*",
-        "webflo/drupal-core-require-dev": "^8.7.0"
+        "drupal/core-dev": "^8.8.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -110,7 +96,6 @@
         }
     },
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "pre-install-cmd": ["Tandem\\composer\\ScriptHandler::checkComposerVersion"],
         "pre-update-cmd": ["Tandem\\composer\\ScriptHandler::checkComposerVersion"],
         "post-install-cmd": [
@@ -127,6 +112,14 @@
         ]
     },
     "extra": {
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
