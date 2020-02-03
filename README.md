@@ -17,7 +17,7 @@ Then do whatever you need to do in your local dev stack to get this running.
 
 Minimis comes with Layout builder enabled.  This is a great way to build out a robust site.  You can register your own layouts by [reading this tutorial](https://www.drupal.org/node/2578731).  Also, if you see the contrib list below, we also added the [Dynamic Layouts](https://www.drupal.org/project/dynamic_layouts) module to allow you to build layouts via the UI.
 
-This distro relies mainly on core modules to get the job done.  It comes with 33 out of the current 75 core modules enabled.  We chose the most used and typical modules to easily build out a typical site.  You can check out the [info file](https://github.com/thinktandem/minimis/blob/master/web/profiles/minimis/minimis.info.yml) to see which modules it comes with.
+This distro relies mainly on core modules to get the job done.  It comes with 33 out of the current 75 core modules enabled.  We chose the most used and typical modules to easily build out a typical site.  You can check out the [info file](https://github.com/thinktandem/minimis/blob/8.x-1.x/minimis.info.yml) to see which modules it comes with.
 
 ### Contrib Modules
 
