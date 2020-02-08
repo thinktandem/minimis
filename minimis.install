@@ -19,7 +19,7 @@ function minimis_install() {
   $sync_directory = '../config/sync';
 
   // Update settings.php.
-  $settings['config_directories']['sync'] = (object) [
+  $settings['settings']['config_sync_directory'] = (object) [
     'value' => $sync_directory,
     'required' => TRUE,
   ];
