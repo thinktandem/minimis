@@ -21,7 +21,7 @@ This distro relies mainly on core modules to get the job done.  It comes with 33
 
 ### Contrib Modules
 
-This distro only comes with 24 (20 installed + 4 additional requirements) contrib modules so you can almost build your entire site without many extra modules.  We chose the following as they provide the best solutions for Site Building, Functionality, Performance & SEO out of the box:
+This distro only comes with 26 (22 installed + 4 additional requirements) contrib modules so you can almost build your entire site without many extra modules.  We chose the following as they provide the best solutions for Site Building, Functionality, Performance & SEO out of the box:
 
 **Site Building / Functionality**
   - admin_toolbar
@@ -50,6 +50,8 @@ This distro only comes with 24 (20 installed + 4 additional requirements) contri
 
 **Performance**
   - big_pipe_sessionless
+  - imageapi_optimize
+  - imageapi_optimize_resmushit
   - lazy
 
 **System**
@@ -59,5 +61,4 @@ This distro only comes with 24 (20 installed + 4 additional requirements) contri
 
 Minimis is Bootstrap 4 compliant via the [Bootstrap Barrio Theme](https://www.drupal.org/project/bootstrap_barrio).  We also install a local source of Bootstrap 4 as well.
 
-  
 We also use the [Adminimal Theme](https://www.drupal.org/project/adminimal_theme) for the backend for a much better approach.   
