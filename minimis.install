@@ -13,7 +13,7 @@
  *
  * @see system_install()
  */
-function minimis_base_install() {
+function minimis_install() {
   global $config_directories;
 
   $sync_directory = '../config/sync';
@@ -27,6 +27,22 @@ function minimis_base_install() {
   // Rewrite this so it changes it on install.
   drupal_rewrite_settings($settings);
   $config_directories['sync'] = $sync_directory;
+
+  drupal_flush_all_caches();
+}
+
+/**
+ * Implements hook_site_install_finished().
+ *
+ * @see https://www.drupal.org/project/drupal/issues/2924549
+ */
+function minimis_site_install_finished($install_state) {
+  if (!empty($install_state['parameters']['profile'])) {
+    $profile = $install_state['parameters']['profile'];
+    if ($profile === 'minimis') {
+      drupal_flush_all_caches();
+    }
+  }
 }
 
 /**
