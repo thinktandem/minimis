@@ -7,6 +7,10 @@ dependencies:
     - media.type.image
   module:
     - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    sections: {  }
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -18,6 +22,7 @@ content:
     settings:
       image_style: original_image
       image_link: ''
+    third_party_settings: {  }
     type: image
     region: content
 hidden:
