@@ -102,8 +102,7 @@
         "pre-update-cmd": ["Tandem\\composer\\ScriptHandler::checkComposerVersion"],
         "post-install-cmd": [
             "Tandem\\composer\\ScriptHandler::createRequiredFiles",
-            "Tandem\\composer\\ScriptHandler::removeGitDirectories",
-            "@composer drupal-scaffold"
+            "Tandem\\composer\\ScriptHandler::removeGitDirectories"
         ],
         "post-update-cmd": [
             "Tandem\\composer\\ScriptHandler::createRequiredFiles",
