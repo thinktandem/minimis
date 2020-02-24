@@ -73,7 +73,7 @@
         "drupal/media_entity_browser": "^2.0",
         "drupal/embed": "^1.0",
         "drupal/big_pipe_sessionless": "^1.2",
-        "drupal/lazy": "~2.0",
+        "drupal/lazy": "~3.2",
         "drupal/config_rewrite": "^1.1",
         "dinbror/blazy": "1.8.2",
         "drupal/entity_embed": "^1.0",
