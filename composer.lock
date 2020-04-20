@@ -2064,27 +2064,27 @@
         },
         {
             "name": "drupal/bootstrap_library",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_library.git",
-                "reference": "8.x-1.11"
+                "reference": "8.x-1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_library-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "af90c93e08223bff8359f5a6789d1cd5cc6ffe70"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_library-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "5822c489a160e3f673093ed34d321b7b16b6238f"
             },
             "require": {
-                "drupal/core": "~8.0",
-                "twbs/bootstrap": "4.1.0"
+                "drupal/core": "^8 || ^9",
+                "twbs/bootstrap": "^4.4.1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1525127580",
+                    "version": "8.x-1.12",
+                    "datestamp": "1587223851",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2097,8 +2097,9 @@
             ],
             "authors": [
                 {
-                    "name": "hatuhay",
-                    "homepage": "https://www.drupal.org/user/827704"
+                    "name": "Alberto Siles",
+                    "homepage": "https://www.drupal.org/user/827704",
+                    "email": "alberto@siles.pe"
                 }
             ],
             "description": "Provides Bootstrap Integration.",
@@ -7738,16 +7739,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v4.1.0",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "8f7bd419935adfcd53c471a0202083464800619e"
+                "reference": "dca1ab7d877bc4b664b43604657a2b5fbe2b4ecb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/8f7bd419935adfcd53c471a0202083464800619e",
-                "reference": "8f7bd419935adfcd53c471a0202083464800619e",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/dca1ab7d877bc4b664b43604657a2b5fbe2b4ecb",
+                "reference": "dca1ab7d877bc4b664b43604657a2b5fbe2b4ecb",
                 "shasum": ""
             },
             "replace": {
@@ -7765,12 +7766,12 @@
             ],
             "authors": [
                 {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                },
-                {
                     "name": "Mark Otto",
                     "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
                 }
             ],
             "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
@@ -7785,7 +7786,7 @@
                 "sass",
                 "web"
             ],
-            "time": "2018-04-09T16:00:23+00:00"
+            "time": "2019-11-28T12:59:49+00:00"
         },
         {
             "name": "twig/twig",
