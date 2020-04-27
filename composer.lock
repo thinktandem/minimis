@@ -2012,26 +2012,27 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "4.23.0",
+            "version": "4.25.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "8.x-4.23"
+                "reference": "8.x-4.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.23.zip",
-                "reference": "8.x-4.23",
-                "shasum": "b4e581c040e1119c17dda8e0abd1983eacf425b5"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.25.zip",
+                "reference": "8.x-4.25",
+                "shasum": "7f0b2c23ed66dc202a6b94c6219c826c04fac882"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9",
+                "twbs/bootstrap": "^4.4.1"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.23",
-                    "datestamp": "1585402736",
+                    "version": "8.x-4.25",
+                    "datestamp": "1587345806",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3699,9 +3700,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
                     "datestamp": "1581640483",
@@ -4181,9 +4179,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.6",
                     "datestamp": "1575467285",
