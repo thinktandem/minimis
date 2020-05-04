@@ -3761,17 +3761,17 @@
         },
         {
             "name": "drupal/layout_builder_restrictions",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/layout_builder_restrictions.git",
-                "reference": "8.x-2.6"
+                "reference": "8.x-2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.6.zip",
-                "reference": "8.x-2.6",
-                "shasum": "80f63e676f24695ab2f45475440851944b1b5b43"
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.7.zip",
+                "reference": "8.x-2.7",
+                "shasum": "7e5658281cc32f7a9c091f065568d696cb7b7bee"
             },
             "require": {
                 "drupal/core": "^8.6.0 || ^9"
@@ -3784,8 +3784,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.6",
-                    "datestamp": "1586904319",
+                    "version": "8.x-2.7",
+                    "datestamp": "1588081705",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
