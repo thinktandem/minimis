@@ -41,21 +41,20 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal/console": "^1.0.2",
-        "drupal/core-recommended": "~8.8",
-        "drupal/core-composer-scaffold": "~8.8.0",
-        "drupal/core-vendor-hardening": "~8.8",
+        "drupal/core-recommended": "~8.9",
+        "drupal/core-composer-scaffold": "~8.9.0",
+        "drupal/core-vendor-hardening": "~8.9",
         "drush/drush": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "drupal/adminimal_theme": "^1.3",
         "drupal/adminimal_admin_toolbar": "^1.5",
-        "drupal/admin_toolbar": "^1.23",
-        "drupal/bootstrap_barrio": "^4.6",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/bootstrap_barrio": "^4.25",
         "drupal/bootstrap_library": "^1.9",
-        "drupal/config_readonly": "^1.0",
+        "drupal/config_readonly": "1.x-dev",
         "drupal/config_split": "^1.2",
         "drupal/ctools": "^3.0",
-        "drupal/dynamic_layouts": "^1.0",
         "drupal/linkit": "^4.3",
         "drupal/metatag": "^1.3",
         "drupal/paragraphs": "^1.2",
@@ -63,10 +62,8 @@
         "drupal/redirect": "^1.0",
         "drupal/schema_metatag": "^1.0",
         "drupal/token": "^1.0",
-        "thinktandem/bootstrap": "dev-master",
         "drupal/simple_sitemap": "^3.0",
         "drupal/token_filter": "^1.1",
-        "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal/layout_builder_restrictions": "^2.3",
         "drupal/google_analytics": "^2.3",
         "drupal/inline_entity_form": "^1.0",
@@ -79,10 +76,12 @@
         "dinbror/blazy": "1.8.2",
         "drupal/entity_embed": "^1.0",
         "drupal/imageapi_optimize": "^4.0@alpha",
-        "drupal/imageapi_optimize_resmushit": "^1.0@beta"
+        "drupal/imageapi_optimize_resmushit": "^1.0@beta",
+        "thinktandem/bootstrap": "dev-master",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8.0"
+        "drupal/core-dev": "~8.9.0"
     },
     "conflict": {
         "drupal/drupal": "*"
