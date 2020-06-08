@@ -43,7 +43,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core-recommended": "~8.8",
         "drupal/core-composer-scaffold": "~8.8.0",
-        "drupal/core-vendor-hardening": "~8.8",
+        "drupal/core-vendor-hardening": "~9.0",
         "drush/drush": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
