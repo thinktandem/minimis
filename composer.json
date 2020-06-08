@@ -78,7 +78,7 @@
         "drupal/config_rewrite": "^1.1",
         "dinbror/blazy": "1.8.2",
         "drupal/entity_embed": "^1.0",
-        "drupal/imageapi_optimize": "^2.0@alpha",
+        "drupal/imageapi_optimize": "^4.0@alpha",
         "drupal/imageapi_optimize_resmushit": "^1.0@beta"
     },
     "require-dev": {
