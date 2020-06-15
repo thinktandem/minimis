@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7e8ad7103e43f04b9b3fd216a5a621e",
+    "content-hash": "a75b1ff32236f1e2423715627dac9aac",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2849,21 +2849,21 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "8.9.0",
+            "version": "9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "07cdfe2799789fc0c2d0e3e1ba64cb5e2a973ece"
+                "reference": "fb112a238577589311395099324ddec7fb4176d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/07cdfe2799789fc0c2d0e3e1ba64cb5e2a973ece",
-                "reference": "07cdfe2799789fc0c2d0e3e1ba64cb5e2a973ece",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/fb112a238577589311395099324ddec7fb4176d7",
+                "reference": "fb112a238577589311395099324ddec7fb4176d7",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1 || ^2",
-                "php": ">=7.0.8"
+                "php": ">=7.3.0"
             },
             "conflict": {
                 "drupal-composer/drupal-scaffold": "*"
@@ -2892,7 +2892,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2020-05-29T11:36:27+00:00"
+            "time": "2020-05-29T11:32:13+00:00"
         },
         {
             "name": "drupal/core-recommended",
@@ -3815,9 +3815,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-2.0",
                     "datestamp": "1555907887",
@@ -4066,7 +4063,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.12",
-                    "datestamp": "1590066861",
+                    "datestamp": "1590140081",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4327,10 +4324,6 @@
                     "homepage": "https://www.drupal.org/u/gbyte.co",
                     "email": "contact@gbyte.co",
                     "role": "Maintainer"
-                },
-                {
-                    "name": "gbyte.co",
-                    "homepage": "https://www.drupal.org/user/2381352"
                 }
             ],
             "description": "Creates a standard conform hreflang XML sitemap of the site content and provides a framework for developing other sitemap types.",
