@@ -1,16 +1,31 @@
-errorClass: b-error
-loadInvisible: false
-offset: 100
-saveViewportOffsetDelay: '50'
-selector: b-lazy
+image_fields: { }
 alter_tag:
   img: img
   iframe: iframe
-skipClass: no-b-lazy
-src: data-src
-successClass: b-loaded
-validateDelay: '25'
-placeholderSrc: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
-image_fields: true
-_core:
-  default_config_hash: 4fKLAfCqFJg0OWqH1mAuoOLR9YCxmOnu_RYfF-yMhzA
+formatters:
+  lazy_image: lazy_image
+  lazy_responsive_image: lazy_responsive_image
+skipClass: no-lazy
+disabled_paths: /rss.xml
+placeholderSrc: ''
+preferNative: false
+lazysizes:
+  lazyClass: lazyload
+  loadedClass: lazyloaded
+  loadingClass: lazyloading
+  preloadClass: lazypreload
+  errorClass: lazyerror
+  autosizesClass: lazyautosizes
+  srcAttr: data-src
+  srcsetAttr: data-srcset
+  sizesAttr: data-sizes
+  minSize: 40
+  customMedia: {  }
+  init: true
+  expFactor: 1.5
+  hFac: 0.8
+  loadMode: 2
+  loadHidden: true
+  ricTimeout: 0
+  throttleDelay: 70
+  plugins: {  }
