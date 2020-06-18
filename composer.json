@@ -21,20 +21,8 @@
             "url": "https://github.com/thinktandem/bootstrap"
         },
         {
-            "type": "package",
-            "package": {
-                "name": "dinbror/blazy",
-                "version": "1.8.2",
-                "type": "drupal-library",
-                "extra": {
-                    "installer-name": "blazy"
-                },
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/dinbror/blazy",
-                    "reference": "1.8.2"
-                }
-            }
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -71,14 +59,15 @@
         "drupal/media_entity_browser": "^2.0",
         "drupal/embed": "^1.0",
         "drupal/big_pipe_sessionless": "^1.2",
-        "drupal/lazy": "~2.0",
+        "drupal/lazy": "^3.0",
         "drupal/config_rewrite": "^1.1",
-        "dinbror/blazy": "1.8.2",
         "drupal/entity_embed": "^1.0",
         "drupal/imageapi_optimize": "^4.0@alpha",
         "drupal/imageapi_optimize_resmushit": "^1.0@beta",
         "thinktandem/bootstrap": "dev-master",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "bower-asset/lazysizes": "5.1"
     },
     "require-dev": {
         "drupal/core-dev": "~8.9.0"
@@ -113,6 +102,7 @@
         ]
     },
     "extra": {
+        "installer-types": ["bower-asset", "npm-asset"],
         "patchLevel": {
             "drupal/core": "-p2"
         },
@@ -123,7 +113,7 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
