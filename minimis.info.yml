@@ -1,7 +1,7 @@
 name: Minimis
 type: profile
 description: Drupal 8 distro that utilizes very few modules yet is quite powerful and easy to use.
-core: 8.x
+core_version_requirement: '^8.8 || ^9'
 
 distribution:
   name: Minimis
