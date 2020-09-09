@@ -2,9 +2,6 @@
   "patches": {
     "drupal/core": {
       "https://dgo.to/2924549 Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch"
-    },
-    "drupal/bootstrap_barrio": {
-      "https://dgo.to/2976934 Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
     }
   }
 }
