@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cac3ddf2915b1a9b95f4da6b61f45f8c",
+    "content-hash": "3e2b94999a1824eb64330490ebaae563",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -132,16 +132,16 @@
         },
         {
             "name": "bower-asset/lazysizes",
-            "version": "5.2.2",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:aFarkas/lazysizes.git",
-                "reference": "bce35e58dc3cdd6793ecd4cf47349ede240199e6"
+                "reference": "916afff5de0a3ffd2ab6b65c57b8336442f04500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aFarkas/lazysizes/zipball/bce35e58dc3cdd6793ecd4cf47349ede240199e6",
-                "reference": "bce35e58dc3cdd6793ecd4cf47349ede240199e6"
+                "url": "https://api.github.com/repos/aFarkas/lazysizes/zipball/916afff5de0a3ffd2ab6b65c57b8336442f04500",
+                "reference": "916afff5de0a3ffd2ab6b65c57b8336442f04500"
             },
             "type": "bower-asset",
             "license": [

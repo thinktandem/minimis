@@ -67,7 +67,7 @@
         "thinktandem/bootstrap": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "bower-asset/lazysizes": "5.2.2"
+        "bower-asset/lazysizes": "5.3.0"
     },
     "require-dev": {
         "drupal/core-dev": "~8.9.0"
