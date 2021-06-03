@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cac3ddf2915b1a9b95f4da6b61f45f8c",
+    "content-hash": "d48f99bde19402f95827d9b90955946a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2013,27 +2013,27 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "5.5.1",
+            "version": "5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
-                "reference": "5.5.1"
+                "reference": "5.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.5.1.zip",
-                "reference": "5.5.1",
-                "shasum": "cc6f630435c4f4e93141511c2e0d8db92b3f90cd"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.1.5.zip",
+                "reference": "5.1.5",
+                "shasum": "65567fb80be6a2f9b941b5f4537eb2585619b3d6"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
-                "twbs/bootstrap": "^5.0.0"
+                "twbs/bootstrap": "^4.4.1"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "5.5.1",
-                    "datestamp": "1621798745",
+                    "version": "5.1.5",
+                    "datestamp": "1621798643",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8193,22 +8193,27 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v5.0.1",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "58b1be927f43c779377e478df2d119f2ddf956ca"
+                "reference": "6ffb0b48e455430f8a5359ed689ad64c1143fac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/58b1be927f43c779377e478df2d119f2ddf956ca",
-                "reference": "58b1be927f43c779377e478df2d119f2ddf956ca",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6ffb0b48e455430f8a5359ed689ad64c1143fac2",
+                "reference": "6ffb0b48e455430f8a5359ed689ad64c1143fac2",
                 "shasum": ""
             },
             "replace": {
                 "twitter/bootstrap": "self.version"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -8241,7 +8246,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-05-13T16:22:20+00:00"
+            "time": "2021-01-19T16:16:38+00:00"
         },
         {
             "name": "twig/twig",
