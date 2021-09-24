@@ -37,7 +37,7 @@
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/admin_toolbar": "^3.0",
         "drupal/bootstrap_barrio": "5.1.*",
-        "drupal/bootstrap_library": "^1.14",
+        "drupal/bootstrap_library": "1.x-dev@dev",
         "drupal/config_readonly": "^1.0",
         "drupal/config_split": "^2.0",
         "drupal/ctools": "^3.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76d6a415935c5b4b328ee0c7be5d1f96",
+    "content-hash": "97abdcd7f9fd0c93f3c0f64dd0def2ed",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1538,17 +1538,11 @@
         },
         {
             "name": "drupal/bootstrap_library",
-            "version": "1.14.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_library.git",
-                "reference": "8.x-1.14"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_library-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "02ce49a5f8b2047150ae89350ad9caac1e04e352"
+                "reference": "8f3d9003177ae267d89f8f624c5858ef4c5efd9c"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -1556,12 +1550,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1597506570",
+                    "version": "8.x-1.14+1-dev",
+                    "datestamp": "1597753864",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -1580,7 +1577,8 @@
             "homepage": "http://drupal.org/project/bootstrap_library",
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap_library"
-            }
+            },
+            "time": "2020-08-18T12:30:30+00:00"
         },
         {
             "name": "drupal/config_readonly",
@@ -1981,7 +1979,7 @@
                     }
                 },
                 "patches_applied": {
-                    "https://dgo.to/2924549 Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch"
+                    "https://dgo.to/2924549 Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/2021-05-06/2924549-47.patch"
                 }
             },
             "autoload": {
@@ -8544,9 +8542,6 @@
                 "ext-zip": "Enabling the zip extension allows you to unzip archives",
                 "ext-zlib": "Allow gzip compression of HTTP requests"
             },
-            "bin": [
-                "bin/composer"
-            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -11623,6 +11618,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/bootstrap_library": 20,
         "thinktandem/bootstrap": 20
     },
     "prefer-stable": true,
