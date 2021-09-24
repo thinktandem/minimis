@@ -1,5 +1,5 @@
 # Minimis
-This is a D8 distro that utilizes very few modules yet is quite powerful and easy to use.
+This is a D9 distro that utilizes very few modules yet is quite powerful and easy to use.
 
 ## Install
 
