@@ -1,71 +1,60 @@
 <?php
 
-namespace Tandem\composer;
-
-use Composer\Semver\Comparator;
-use Symfony\Component\Filesystem\Filesystem;
-use Composer\EventDispatcher\Event;
-
 /**
- * Tandem Composer Script Handler.
- * (shout out to Varbase profile to help build this)
+ * @file
+ * Contains \DrupalProject\composer\ScriptHandler.
  */
+
+namespace DrupalProject\composer;
+
+use Composer\Script\Event;
+use Composer\Semver\Comparator;
+use DrupalFinder\DrupalFinder;
+use Symfony\Component\Filesystem\Filesystem;
+use Webmozart\PathUtil\Path;
+
 class ScriptHandler {
 
-  /**
-   * Get the Drupal root directory.
-   *
-   * @param string $project_root
-   *    Project root.
-   *
-   * @return string
-   *    Drupal root path.
-   */
-  protected static function getDrupalRoot($project_root) {
-    return $project_root . '/web';
-  }
-
-  /**
-   * Create required files.
-   *
-   * @param Event $event
-   *   Event of creeate required files.
-   */
   public static function createRequiredFiles(Event $event) {
-
     $fs = new Filesystem();
-    $drupal_root = static::getDrupalRoot(getcwd());
+    $drupalFinder = new DrupalFinder();
+    $drupalFinder->locateRoot(getcwd());
+    $drupalRoot = $drupalFinder->getDrupalRoot();
 
     $dirs = [
       'modules',
       'profiles',
       'themes',
-      'libraries',
     ];
 
-    // Required for unit testing.
+    // Required for unit testing
     foreach ($dirs as $dir) {
-      if (!$fs->exists($drupal_root . '/' . $dir)) {
-        $fs->mkdir($drupal_root . '/' . $dir);
-        $fs->touch($drupal_root . '/' . $dir . '/.gitkeep');
+      if (!$fs->exists($drupalRoot . '/'. $dir)) {
+        $fs->mkdir($drupalRoot . '/'. $dir);
+        $fs->touch($drupalRoot . '/'. $dir . '/.gitkeep');
       }
     }
-    // Prepare the settings file for installation.
-    if (!$fs->exists($drupal_root . '/sites/default/settings.php') and $fs->exists($drupal_root . '/sites/default/default.settings.php')) {
-      $fs->copy($drupal_root . '/sites/default/default.settings.php', $drupal_root . '/sites/default/settings.php');
-      $fs->chmod($drupal_root . '/sites/default/settings.php', 0666);
+
+    // Prepare the settings file for installation
+    if (!$fs->exists($drupalRoot . '/sites/default/settings.php') and $fs->exists($drupalRoot . '/sites/default/default.settings.php')) {
+      $fs->copy($drupalRoot . '/sites/default/default.settings.php', $drupalRoot . '/sites/default/settings.php');
+      require_once $drupalRoot . '/core/includes/bootstrap.inc';
+      require_once $drupalRoot . '/core/includes/install.inc';
+      $settings['config_directories'] = [
+        CONFIG_SYNC_DIRECTORY => (object) [
+          'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/config/sync', $drupalRoot),
+          'required' => TRUE,
+        ],
+      ];
+      drupal_rewrite_settings($settings, $drupalRoot . '/sites/default/settings.php');
+      $fs->chmod($drupalRoot . '/sites/default/settings.php', 0666);
       $event->getIO()->write("Create a sites/default/settings.php file with chmod 0666");
     }
-    // Prepare the services file for installation.
-    if (!$fs->exists($drupal_root . '/sites/default/services.yml') and $fs->exists($drupal_root . '/sites/default/default.services.yml')) {
-      $fs->copy($drupal_root . '/sites/default/default.services.yml', $drupal_root . '/sites/default/services.yml');
-      $fs->chmod($drupal_root . '/sites/default/services.yml', 0666);
-      $event->getIO()->write("Create a sites/default/services.yml file with chmod 0666");
-    }
-    // Create the files directory with chmod 0777.
-    if (!$fs->exists($drupal_root . '/sites/default/files')) {
+
+    // Create the files directory with chmod 0777
+    if (!$fs->exists($drupalRoot . '/sites/default/files')) {
       $oldmask = umask(0);
-      $fs->mkdir($drupal_root . '/sites/default/files', 0777);
+      $fs->mkdir($drupalRoot . '/sites/default/files', 0777);
       umask($oldmask);
       $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
     }
@@ -88,12 +77,15 @@ class ScriptHandler {
   public static function checkComposerVersion(Event $event) {
     $composer = $event->getComposer();
     $io = $event->getIO();
+
     $version = $composer::VERSION;
+
     // The dev-channel of composer uses the git revision as version number,
     // try to the branch alias instead.
     if (preg_match('/^[0-9a-f]{40}$/i', $version)) {
       $version = $composer::BRANCH_ALIAS_VERSION;
     }
+
     // If Composer is installed through git we have no easy way to determine if
     // it is new enough, just display a warning.
     if ($version === '@package_version@' || $version === '@package_branch_alias_version@') {
@@ -103,14 +95,6 @@ class ScriptHandler {
       $io->writeError('<error>Drupal-project requires Composer version 1.0.0 or higher. Please update your Composer before continuing</error>.');
       exit(1);
     }
-  }
-
-  /**
-   * Remove .git folder from modules, themes, profiles of development branches.
-   */
-  public static function removeGitDirectories() {
-    $drupal_root = static::getDrupalRoot(getcwd());
-    exec("find " . $drupal_root . " -name '.git' | xargs rm -rf");
   }
 
 }

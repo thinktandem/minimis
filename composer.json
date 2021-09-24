@@ -77,27 +77,25 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "preferred-install": "dist",
-        "autoloader-suffix": "Drupal8"
+        "sort-packages": true
     },
     "autoload": {
-        "psr-4": {
-            "Tandem\\composer\\": "src/composer"
-        }
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
     },
     "scripts": {
-        "pre-install-cmd": ["Tandem\\composer\\ScriptHandler::checkComposerVersion"],
-        "pre-update-cmd": ["Tandem\\composer\\ScriptHandler::checkComposerVersion"],
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
         "post-install-cmd": [
-            "Tandem\\composer\\ScriptHandler::createRequiredFiles",
-            "Tandem\\composer\\ScriptHandler::removeGitDirectories"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-update-cmd": [
-            "Tandem\\composer\\ScriptHandler::createRequiredFiles",
-            "Tandem\\composer\\ScriptHandler::removeGitDirectories"
-        ],
-        "nuke": [
-            "rm -r -f web vendor composer.lock"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ]
     },
     "extra": {

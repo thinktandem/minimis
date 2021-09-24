@@ -1560,6 +1560,9 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "https://dgo.to/3034302 Deprecated strtolower need to be replaced": "https://www.drupal.org/files/issues/2020-10-29/3034302-7.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
