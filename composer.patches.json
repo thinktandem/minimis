@@ -2,9 +2,6 @@
   "patches": {
     "drupal/core": {
       "https://dgo.to/2924549 Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/2021-05-06/2924549-47.patch"
-    },
-    "drupal/bootstrap_library": {
-      "https://dgo.to/3034302 Deprecated strtolower need to be replaced": "https://www.drupal.org/files/issues/2020-10-29/3034302-7.patch"
     }
   }
 }
