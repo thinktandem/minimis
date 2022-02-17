@@ -29,10 +29,10 @@
         "php": ">=7.0",
         "composer/installers": "^1.8",
         "cweagans/composer-patches": "^1.6",
-        "drupal/core-composer-scaffold": "~9.2",
-        "drupal/core-recommended": "~9.2",
-        "drupal/core-vendor-hardening": "~9.2",
-        "drush/drush": "^10.0.0",
+        "drupal/core-composer-scaffold": "~9.3",
+        "drupal/core-recommended": "~9.3",
+        "drupal/core-vendor-hardening": "~9.3",
+        "drush/drush": "^11.0",
         "drupal/adminimal_theme": "^1.6",
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/admin_toolbar": "^3.0",
@@ -69,7 +69,7 @@
         "webmozart/path-util": "^2.0"
     },
     "require-dev": {
-        "drupal/core-dev": "~9.2"
+        "drupal/core-dev": "~9.3"
     },
     "conflict": {
         "drupal/drupal": "*"
